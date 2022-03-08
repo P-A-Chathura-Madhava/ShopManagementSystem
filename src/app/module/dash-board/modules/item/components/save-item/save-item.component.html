@@ -1,0 +1,29 @@
+<div class="main-wrap">
+  <form [formGroup]="saveItemForm" (ngSubmit)="saveData()">
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Item Code</mat-label>
+        <input formControlName="code" matInput type="text" placeholder="Ex. P001">
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Item Description</mat-label>
+        <input formControlName="description" matInput type="text" placeholder="Ex. Biscuit">
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Unit Price</mat-label>
+        <input formControlName="unitPrice" matInput type="1234">
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>QTY On Hand</mat-label>
+        <input formControlName="qtyOnHand" matInput type="1234">
+      </mat-form-field>
+    </div>
+    <button [disabled]="saveItemForm.invalid" type = "submit" mat-button mat-raised-button color="primary">Save Item</button>
+  </form>
+</div>

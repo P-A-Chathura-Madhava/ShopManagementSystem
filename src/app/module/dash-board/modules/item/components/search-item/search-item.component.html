@@ -1,0 +1,37 @@
+<div class="main-wrap">
+  <div class="main-wrap">
+    <form [formGroup]="searchItemForm" (ngSubmit)="searchData()">
+      <div class="col-3">
+        <mat-form-field class="example-full-width">
+          <mat-label>Item Code</mat-label>
+          <input formControlName="code" matInput type="text" placeholder="Ex. C001">
+        </mat-form-field>
+      </div>
+      <button [disabled]="searchItemForm.invalid" type = "submit" mat-button mat-raised-button color="primary">Search Item</button>
+    </form>
+  </div>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Item Code</th>
+      <th>Item Description</th>
+      <th>Unit Price</th>
+      <th>QTY On Hand</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{selectedItem?.code}}</td>
+      <td>{{selectedItem?.description}}</td>
+      <td>{{selectedItem?.unitPrice}}</td>
+      <td>{{selectedItem?.qtyOnHand}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<mat-paginator [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page">
+</mat-paginator>

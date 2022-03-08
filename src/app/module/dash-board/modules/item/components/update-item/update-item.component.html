@@ -1,0 +1,29 @@
+<div class="main-wrap">
+  <form [formGroup]="updateItemForm" (ngSubmit)="updateData()">
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Item Code</mat-label>
+        <input formControlName="code" matInput type="text" placeholder="Ex. C001">
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Item Description</mat-label>
+        <input formControlName="description" matInput type="text" placeholder="Ex. Nimal">
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Unit Price</mat-label>
+        <input formControlName="unitPrice" matInput type="number">
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>QTY On Hand</mat-label>
+        <input formControlName="qtyOnHand" matInput type="number">
+      </mat-form-field>
+    </div>
+    <button [disabled]="updateItemForm.invalid" type = "submit" mat-button mat-raised-button color="primary">Update Item</button>
+  </form>
+</div>

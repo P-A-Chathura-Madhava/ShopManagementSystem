@@ -12,7 +12,7 @@
       <input type="text" class="form-control" disabled value="{{selectedCustomer?.name}}">
     </div>
     <div class="col-4">
-      <input type="text" class="form-control" disabled value="{{selectedCustomer?.address}}}">
+      <input type="text" class="form-control" disabled value="{{selectedCustomer?.address}}">
     </div>
     <div class="col-3">
       <input type="text" class="form-control" [disabled]="true" [value]="selectedCustomer?.salary">
@@ -23,7 +23,7 @@
   <div class="row">
     <div class="col-1">
       <select class="form-control" #idElement (change)="selectItem(idElement.value)">
-        <option *ngFor="let tempItem of itemList" value="{{tempItem.code}}">{{tempItem.code}}</option>
+        <option *ngFor="let tempItem of items" value="{{tempItem.code}}">{{tempItem.code}}</option>
       </select>
     </div>
     <div class="col-4">

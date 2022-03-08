@@ -1,0 +1,11 @@
+<div class="main-wrap">
+  <form [formGroup]="deleteItemForm" (ngSubmit)="deleteData()">
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Item Code</mat-label>
+        <input formControlName="code" matInput type="text" placeholder="Ex. P001">
+      </mat-form-field>
+    </div>
+    <button [disabled]="deleteItemForm.invalid" type = "submit" mat-button mat-raised-button color="primary">Delete Item</button>
+  </form>
+</div>

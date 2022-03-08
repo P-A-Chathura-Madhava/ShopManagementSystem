@@ -2,16 +2,18 @@
   <table class="table table-hover">
     <thead>
     <tr>
-      <th>Customer ID</th>
-      <th>Total</th>
-      <th>Order Details</th>
+      <th>Item Code</th>
+      <th>Item Description</th>
+      <th>Unit Price</th>
+      <th>QTY On Hand</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let tempOrder of orders; index as num">
-      <td>{{tempOrder.customer.id}}</td>
-      <td>{{tempOrder.total}}</td>
-      <td class="row-width"><button class="btn btn-primary btn-sm">Order Details</button></td>
+    <tr *ngFor="let tempItem of items; index as num">
+      <td>{{tempItem.code}}</td>
+      <td>{{tempItem.description}}</td>
+      <td>{{tempItem.unitPrice}}</td>
+      <td>{{tempItem.qtyOnHand}}</td>
     </tr>
     </tbody>
   </table>
@@ -21,4 +23,3 @@
                [pageSizeOptions]="[5, 10, 25, 100]"
                aria-label="Select page">
 </mat-paginator>
-

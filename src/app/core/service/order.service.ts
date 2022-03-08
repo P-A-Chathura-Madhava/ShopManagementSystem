@@ -17,4 +17,8 @@ export class OrderService {
       customer, items, total
     });
   }
+
+  public getAllOrders(): Observable<any>{
+    return this.http.get(this.url + 'order/getAllOrders');
+  }
 }
