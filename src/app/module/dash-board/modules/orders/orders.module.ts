@@ -6,11 +6,13 @@ import { OrdersComponent } from './orders.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
+import { DetailDialogComponent } from './modal/detail-dialog/detail-dialog.component';
 
 
 @NgModule({
   declarations: [
-    OrdersComponent
+    OrdersComponent,
+    DetailDialogComponent
   ],
   imports: [
     CommonModule,

@@ -11,7 +11,7 @@
     <tr *ngFor="let tempOrder of orders; index as num">
       <td>{{tempOrder.customer.id}}</td>
       <td>{{tempOrder.total}}</td>
-      <td class="row-width"><button class="btn btn-primary btn-sm">Order Details</button></td>
+      <td class="row-width"><button class="btn btn-primary btn-sm" (click)="openOrderDetail(tempOrder.customer.id, tempOrder.total, tempOrder.items)">Order Details</button></td>
     </tr>
     </tbody>
   </table>
